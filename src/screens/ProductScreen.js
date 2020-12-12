@@ -20,7 +20,7 @@ const ProductScreen = props => {
 
   useEffect(() => {
     dispatch(detailsProduct(productId));
-  }, []);
+  }, [dispatch, productId]);
 
   const addToCardHandler = () => {
     props.history.push(`/cart/${productId}?qty=${qty}`);
